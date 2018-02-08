@@ -22,7 +22,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lNW-tx-Lxt">
                         <rect key="frame" x="0.0" y="0.0" width="176" height="194"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MIH-nT-zpK" customClass="CLImageViewPopup" customModule="CLImageViewPopup">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MIH-nT-zpK">
                                 <rect key="frame" x="0.0" y="0.0" width="176" height="194"/>
                             </imageView>
                         </subviews>

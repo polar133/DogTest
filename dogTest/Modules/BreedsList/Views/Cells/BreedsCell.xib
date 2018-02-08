@@ -19,7 +19,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="69.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cDy-G2-phQ" customClass="ShadesView" customModule="Shades">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cDy-G2-phQ">
                         <rect key="frame" x="5" y="4" width="310" height="57.5"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8aK-4F-0FO">
@@ -39,30 +39,12 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="WZ6-Xm-Y7x" secondAttribute="bottom" constant="14.5" id="1hc-8S-cIf"/>
-                            <constraint firstItem="WZ6-Xm-Y7x" firstAttribute="centerY" secondItem="cDy-G2-phQ" secondAttribute="centerY" id="3NT-oh-6U9"/>
                             <constraint firstItem="8aK-4F-0FO" firstAttribute="leading" secondItem="cDy-G2-phQ" secondAttribute="leading" constant="16" id="G6a-DW-eEe"/>
                             <constraint firstItem="WZ6-Xm-Y7x" firstAttribute="leading" secondItem="8aK-4F-0FO" secondAttribute="trailing" constant="12" id="NDf-qF-0cD"/>
                             <constraint firstItem="8aK-4F-0FO" firstAttribute="centerY" secondItem="cDy-G2-phQ" secondAttribute="centerY" id="ZVM-Hh-pTi"/>
                             <constraint firstItem="WZ6-Xm-Y7x" firstAttribute="top" secondItem="cDy-G2-phQ" secondAttribute="top" constant="16" id="d2p-e0-mQr"/>
                             <constraint firstAttribute="trailing" secondItem="WZ6-Xm-Y7x" secondAttribute="trailing" constant="12" id="dBN-EW-hWu"/>
                         </constraints>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                <color key="value" red="0.70196078429999997" green="0.70196078429999997" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
-                            </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
-                                <size key="value" width="0.0" height="0.0"/>
-                            </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                <real key="value" value="0.0"/>
-                            </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                <real key="value" value="5"/>
-                            </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                <real key="value" value="0.0"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
                 <constraints>
