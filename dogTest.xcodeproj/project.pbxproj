@@ -12,7 +12,6 @@
 		07C3F1D6202CB5B6004DB94B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07C3F1D4202CB5B6004DB94B /* Main.storyboard */; };
 		07C3F1D8202CB5B6004DB94B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07C3F1D7202CB5B6004DB94B /* Assets.xcassets */; };
 		07C3F1DB202CB5B6004DB94B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07C3F1D9202CB5B6004DB94B /* LaunchScreen.storyboard */; };
-		07C3F1E6202CB5B6004DB94B /* dogTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C3F1E5202CB5B6004DB94B /* dogTestTests.swift */; };
 		730995D5F8961C26ED5739B7 /* Pods_dogTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2500C467EEF41FDAEB60741D /* Pods_dogTest.framework */; };
 		92260D275C06C8151C3802BF /* Pods_dogTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED91533F69210D64D41DDF11 /* Pods_dogTestTests.framework */; };
 /* End PBXBuildFile section */
@@ -36,7 +35,6 @@
 		07C3F1DA202CB5B6004DB94B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		07C3F1DC202CB5B6004DB94B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07C3F1E1202CB5B6004DB94B /* dogTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = dogTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		07C3F1E5202CB5B6004DB94B /* dogTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dogTestTests.swift; sourceTree = "<group>"; };
 		07C3F1E7202CB5B6004DB94B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A3C5404D6A2FCD091C8833F /* Pods-dogTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dogTestTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-dogTestTests/Pods-dogTestTests.release.xcconfig"; sourceTree = "<group>"; };
 		2500C467EEF41FDAEB60741D /* Pods_dogTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dogTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,7 +100,6 @@
 		07C3F1E4202CB5B6004DB94B /* dogTestTests */ = {
 			isa = PBXGroup;
 			children = (
-				07C3F1E5202CB5B6004DB94B /* dogTestTests.swift */,
 				07C3F1E7202CB5B6004DB94B /* Info.plist */,
 			);
 			path = dogTestTests;
@@ -367,7 +364,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07C3F1E6202CB5B6004DB94B /* dogTestTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,7 +445,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -500,7 +496,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
