@@ -12,6 +12,13 @@ import UIKit
 
 open class BreedsListCoordinator {
     
+    init(callback: @escaping (String) -> ()?) {
+        self.callbackAction = callback
+    }
+    
+    // MARK: - Properties
+    var callbackAction: (String) -> ()?
+    
     // MARK: Private
     fileprivate static let bundle = Bundle(for: BreedsListCoordinator.self)
     
@@ -28,6 +35,7 @@ open class BreedsListCoordinator {
         if _breedListVC == nil {
             let viewModel = BreedsListViewModel()
             let viewController = BreedsListViewController(viewModel: viewModel)
+            viewController.delegate = self
             _breedListVC = viewController
         }
         return _breedListVC!
@@ -41,4 +49,10 @@ open class BreedsListCoordinator {
     
 }
 
+
+extension BreedsListCoordinator: BreedListProtocol{
+    func  selectBreed(name: String) {
+        self.callbackAction(name)
+    }
+}
 

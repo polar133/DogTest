@@ -11,7 +11,7 @@ import UIKit
 
 enum NavAvailable: Navigation {
     case listBreeds
-    case detailBreed
+    case detailBreed(String)
     
     var navIdentifier: String {
         switch self {
@@ -24,11 +24,12 @@ enum NavAvailable: Navigation {
 }
 
 class DogNavigation: AppNavigation {
+
+    typealias CallbackAction = (String) -> ()
     
-    typealias CallbackAction = () -> ()
-    typealias CallbackNavAction = (String) -> ()
-    
-    
+    lazy var breedSelectedAction: CallbackAction = { [unowned self] (breed) in
+        UIApplication.topViewController()?.navigate(NavAvailable.detailBreed(breed))
+    }
 }
 
 extension DogNavigation{
@@ -37,12 +38,14 @@ extension DogNavigation{
         if let navigation = navigation as? NavAvailable {
             switch navigation {
             case .listBreeds:
-                let breedsListCoordinator = BreedsListCoordinator()
+                let breedsListCoordinator = BreedsListCoordinator(callback: breedSelectedAction)
                 let vc = breedsListCoordinator.rootViewController()
                 return vc
-                
-            default:
-                return UIViewController()
+            case .detailBreed(let breed):
+                let breedImageCoordinator = BreedImagesCoordinator()
+                breedImageCoordinator.breedName = breed
+                let vc = breedImageCoordinator.rootViewController()
+                return vc
             }
             
         }

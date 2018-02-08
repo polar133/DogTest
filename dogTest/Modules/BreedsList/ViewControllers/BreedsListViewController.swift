@@ -8,10 +8,16 @@
 
 import UIKit
 
+protocol BreedListProtocol{
+    func selectBreed(name: String)
+}
+
 class BreedsListViewController: UIViewController {
 
     @IBOutlet var breedsTableView: UITableView!
     private var viewModel : BreedsListViewModel?
+    
+    var delegate: BreedListProtocol?
     
     init(viewModel : BreedsListViewModel) {
         self.viewModel = viewModel
@@ -53,5 +59,8 @@ extension BreedsListViewController: UITableViewDelegate, UITableViewDataSource{
         return UITableViewCell()
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.delegate?.selectBreed(name: self.viewModel?.getBreed(index: indexPath.row) ?? "")
+    }
     
 }
