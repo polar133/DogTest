@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import TRMosaicLayout
 
 class BreedImagesViewController: UIViewController {
 
@@ -29,6 +30,12 @@ class BreedImagesViewController: UIViewController {
     }
     
     private func viewConfigurations() {
+        self.title = self.viewModel?.title ?? ""
+        
+        let mosaicLayout = TRMosaicLayout()
+        self.dogsCollectionView.collectionViewLayout = mosaicLayout
+        mosaicLayout.delegate = self
+        
         dogsCollectionView.register(UINib.init(nibName: DogCell.nibName, bundle: nil), forCellWithReuseIdentifier: DogCell.identifier)
     }
     
@@ -60,4 +67,19 @@ extension BreedImagesViewController: UICollectionViewDelegate, UICollectionViewD
     }
     
     
+}
+
+extension BreedImagesViewController: TRMosaicLayoutDelegate {
+    
+    func collectionView(_ collectionView:UICollectionView, mosaicCellSizeTypeAtIndexPath indexPath:IndexPath) -> TRMosaicCellType {
+        return indexPath.item % 3 == 0 ? TRMosaicCellType.big : TRMosaicCellType.small
+    }
+    
+    func collectionView(_ collectionView:UICollectionView, layout collectionViewLayout: TRMosaicLayout, insetAtSection:Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 3, left: 3, bottom: 3, right: 3)
+    }
+    
+    func heightForSmallMosaicCell() -> CGFloat {
+        return 150
+    }
 }

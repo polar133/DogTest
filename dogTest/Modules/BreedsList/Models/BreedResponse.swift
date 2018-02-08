@@ -14,11 +14,6 @@ struct BreedResponse: APIResponse {
     var message : [String]?
 }
 
-extension BreedResponse: Equatable {}
-func == (lhs: BreedResponse, rhs: BreedResponse) -> Bool {
-    return lhs.message ?? [] == rhs.message ?? []
-}
-
 extension BreedResponse: Unboxable {
     init(unboxer: Unboxer) throws {
         self.status = unboxer.unbox(key: "status")

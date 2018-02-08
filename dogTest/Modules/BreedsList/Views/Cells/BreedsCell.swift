@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import LetterAvatarKit
+import Shades
 
 class BreedsCell: UITableViewCell {
 
@@ -14,6 +16,7 @@ class BreedsCell: UITableViewCell {
     static let identifier = String(describing: BreedsCell.self)
     
     @IBOutlet var breedLabel: UILabel!
+    @IBOutlet var avatarImage: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -21,6 +24,11 @@ class BreedsCell: UITableViewCell {
 
     func config(breedName: String){
         self.breedLabel.text = breedName
+        
+        let configuration = LetterAvatarBuilderConfiguration()
+        configuration.username = breedName.uppercased()
+        configuration.singleLetter = true
+        avatarImage?.image = UIImage.makeLetterAvatar(withConfiguration: configuration)
     }
     
 }

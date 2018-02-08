@@ -22,7 +22,8 @@ class DogCell: UICollectionViewCell {
     
     func config(urlOrigin: String){
         let url = URL(string: urlOrigin)
-        dogImage.kf.setImage(with: url)
+        let placeholderImage = UIImage(named: "dog_placeholder")
+        dogImage.kf.setImage(with: url, placeholder: placeholderImage)
     }
 
 }

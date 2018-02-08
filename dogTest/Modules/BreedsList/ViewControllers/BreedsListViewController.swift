@@ -17,6 +17,7 @@ class BreedsListViewController: UIViewController {
     @IBOutlet var breedsTableView: UITableView!
     private var viewModel : BreedsListViewModel?
     
+    
     var delegate: BreedListProtocol?
     
     init(viewModel : BreedsListViewModel) {
@@ -28,6 +29,10 @@ class BreedsListViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         viewConfigurations()
@@ -35,6 +40,7 @@ class BreedsListViewController: UIViewController {
     }
     
     private func viewConfigurations() {
+        self.title = self.viewModel?.title ?? ""
         breedsTableView.register(UINib.init(nibName: BreedsCell.nibName, bundle: nil), forCellReuseIdentifier: BreedsCell.identifier)
     }
     
@@ -48,7 +54,7 @@ class BreedsListViewController: UIViewController {
 
 extension BreedsListViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.viewModel?.getBreedsCount() ?? 0
+        return self.viewModel?.getBreedsCount() ?? 20
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -63,4 +69,9 @@ extension BreedsListViewController: UITableViewDelegate, UITableViewDataSource{
         self.delegate?.selectBreed(name: self.viewModel?.getBreed(index: indexPath.row) ?? "")
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return self.viewModel?.getHeightRow() ?? 50
+    }
 }
+
+

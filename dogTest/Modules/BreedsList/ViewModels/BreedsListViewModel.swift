@@ -17,6 +17,12 @@ class BreedsListViewModel {
     fileprivate var URL: String { return "https://dog.ceo/api/breeds/list" }
     fileprivate var breeds : [Breed] = []
     
+    public let title : String = "Breeds of dogs"
+    
+    func getHeightRow() -> CGFloat{
+        return 70.0
+    }
+    
     func getBreed(index: Int) -> Breed {
         return breeds[index]
     }

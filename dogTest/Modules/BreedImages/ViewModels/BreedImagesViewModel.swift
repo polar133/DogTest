@@ -18,6 +18,7 @@ class BreedImagesViewModel {
     fileprivate var URL: String { return "https://dog.ceo/api/breed/\(breedName)/images" }
     fileprivate var dogs : [Dog] = []
     
+    public var title : String { return breedName }
     
     init(breedName: String){
         self.breedName = breedName

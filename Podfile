@@ -6,14 +6,12 @@ source 'https://github.com/CocoaPods/Specs.git'
 
 
 def visual_pods
-    pod 'MBProgressHUD'
-    pod 'SkeletonView'
-    pod 'GSKStretchyHeaderView'
-    pod 'Hero'
+    pod 'LetterAvatarKit'
+    pod 'Shades'
+    pod 'TRMosaicLayout'
 end
 
 def general_pods
-    pod 'CocoaLumberjack/Swift'
     pod 'Kingfisher'
 end
 
