@@ -32,6 +32,7 @@ class BreedImagesViewModel {
         return dogs.count
     }
     
+    // MARK: - Get list of dogs
     func fetchDogsList(completionHandler: @escaping () -> ()){
         
         Alamofire.request(URL, method: .get).responseObject { [weak self] (response: DataResponse<DogsResponse>) in

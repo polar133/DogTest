@@ -9,6 +9,9 @@
 
 import UIKit
 
+//
+// MARK: Modules of navigations
+//
 enum NavAvailable: Navigation {
     case listBreeds
     case detailBreed(String)
@@ -23,6 +26,9 @@ enum NavAvailable: Navigation {
     }
 }
 
+//
+// MARK: Callbacks
+//
 class DogNavigation: AppNavigation {
 
     typealias CallbackAction = (String) -> ()
@@ -32,6 +38,9 @@ class DogNavigation: AppNavigation {
     }
 }
 
+//
+// MARK: Navigation of modules
+//
 extension DogNavigation{
     
     public func viewcontrollerForNavigation(navigation: Navigation) -> UIViewController {

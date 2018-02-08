@@ -29,6 +29,7 @@ class BreedImagesViewController: UIViewController {
         fetchData()
     }
     
+    // MARK: - Configure Views
     private func viewConfigurations() {
         self.title = self.viewModel?.title ?? ""
         
@@ -39,6 +40,7 @@ class BreedImagesViewController: UIViewController {
         dogsCollectionView.register(UINib.init(nibName: DogCell.nibName, bundle: nil), forCellWithReuseIdentifier: DogCell.identifier)
     }
     
+    // MARK: - Get data from ViewModel
     private func fetchData(){
         self.viewModel?.fetchDogsList(completionHandler: { [weak self] in
             self?.dogsCollectionView.reloadData()

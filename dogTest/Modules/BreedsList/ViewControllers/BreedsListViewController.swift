@@ -8,15 +8,17 @@
 
 import UIKit
 
+// MARK: - Actions in BreedsListViewController
 protocol BreedListProtocol{
     func selectBreed(name: String)
 }
 
+
+// MARK: - BreedsListViewController
 class BreedsListViewController: UIViewController {
 
     @IBOutlet var breedsTableView: UITableView!
     private var viewModel : BreedsListViewModel?
-    
     
     var delegate: BreedListProtocol?
     
@@ -39,11 +41,13 @@ class BreedsListViewController: UIViewController {
         fetchData()
     }
     
+    // MARK: - Configure Views
     private func viewConfigurations() {
         self.title = self.viewModel?.title ?? ""
         breedsTableView.register(UINib.init(nibName: BreedsCell.nibName, bundle: nil), forCellReuseIdentifier: BreedsCell.identifier)
     }
     
+    // MARK: - Get data from ViewModel
     private func fetchData(){
         self.viewModel?.fetchBreedsList(completionHandler: { [weak self] in
             self?.breedsTableView.reloadData()

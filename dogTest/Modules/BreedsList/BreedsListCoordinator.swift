@@ -10,8 +10,12 @@ import Foundation
 
 import UIKit
 
+//
+// MARK: - Coordinator for the module BreedsLists
+//
 open class BreedsListCoordinator {
     
+    // MARK: - Init with callback
     init(callback: @escaping (String) -> ()?) {
         self.callbackAction = callback
     }
@@ -19,10 +23,10 @@ open class BreedsListCoordinator {
     // MARK: - Properties
     var callbackAction: (String) -> ()?
     
-    // MARK: Private
+    // MARK: - Private
     fileprivate static let bundle = Bundle(for: BreedsListCoordinator.self)
     
-    // MARK: View Controller's
+    // MARK: - View Controller's
     fileprivate var navigationController: UINavigationController {
         if _navigationController == nil {
             _navigationController = UINavigationController(rootViewController: self.breedListVC)
@@ -43,13 +47,15 @@ open class BreedsListCoordinator {
     
     private var _breedListVC: BreedsListViewController?
     
+    
+    // MARK: - RootViewController to be accesible from Navigation
     open func rootViewController() -> UIViewController {
         return navigationController
     }
     
 }
 
-
+// MARK: - Extensions of ViewControllers
 extension BreedsListCoordinator: BreedListProtocol{
     func  selectBreed(name: String) {
         self.callbackAction(name)
