@@ -31,6 +31,7 @@ target 'dogTest' do
   # Pods for dogTest
   visual_pods
   general_pods
+  networking_pods
 
   target 'dogTestTests' do
     inherit! :search_paths
