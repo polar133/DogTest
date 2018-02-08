@@ -25,7 +25,7 @@ class BreedImagesViewModelTests: QuickSpec {
                 }
                 
                 it("should be able to start a request from a given Service") {
-                    let viewModel = BreedImagesViewModel(breedName: "hound")
+                    let viewModel = BreedImagesViewModel(breedName: "")
                     viewModel.fetchDogsList(completionHandler: {
                         expect(viewModel.getDogsCount()).to(equal(1))
                         expect(viewModel.getDog(index: 0)).to(equal("https://dog.ceo/api/img/hound-Ibizan/n02091244_100.jpg"))
