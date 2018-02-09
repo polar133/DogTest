@@ -25,11 +25,10 @@ class BreedImagesViewModelTests: QuickSpec {
                 }
                 
                 it("should be able to start a request from a given Service") {
-                    let viewModel = BreedImagesViewModel(breedName: "")
-                    viewModel.fetchDogsList(completionHandler: {
-                        expect(viewModel.getDogsCount()).to(equal(1))
-                        expect(viewModel.getDog(index: 0)).to(equal("https://dog.ceo/api/img/hound-Ibizan/n02091244_100.jpg"))
-                    })
+                    let viewModel = BreedImagesViewModel(breedName: "hound")
+                    viewModel.fetchDogsList(completionHandler: {})
+                    expect(viewModel.getDogsCount()).toEventually(equal(1))
+                    expect(viewModel.getDog(index: 0)).toEventually(equal("https://dog.ceo/api/img/hound-Ibizan/n02091244_100.jpg"))
                 }
             }
             
@@ -37,7 +36,6 @@ class BreedImagesViewModelTests: QuickSpec {
                 beforeEach {
                     let serverErrorStub = http(500, headers: nil, download: .noContent)
                     self.stub(http(.get, uri: "https://dog.ceo/api/breed/hound/images"), delay: nil, serverErrorStub)
-                    
                 }
                 
                 it("should fail the request") {

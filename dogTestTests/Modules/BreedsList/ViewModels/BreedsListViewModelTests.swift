@@ -28,10 +28,9 @@ class BreedsListViewModelTests: QuickSpec {
                 
                 it("should be able to start a request from a given Service") {
                     let viewModel = BreedsListViewModel()
-                    viewModel.fetchBreedsList(completionHandler: {
-                        expect(viewModel.getBreedsCount()).to(equal(1))
-                        expect(viewModel.getBreed(index: 0)).to(equal("affenpinscher"))
-                    })
+                    viewModel.fetchBreedsList(completionHandler: {})
+                    expect(viewModel.getBreedsCount()).toEventually(equal(1))
+                    expect(viewModel.getBreed(index: 0)).toEventually(equal("affenpinscher"))
                 }
             }
             context("Trying to GET request error") {

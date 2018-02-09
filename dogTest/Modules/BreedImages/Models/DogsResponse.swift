@@ -14,11 +14,6 @@ struct DogsResponse: APIResponse {
     var message : [String]?
 }
 
-extension DogsResponse: Equatable {}
-func == (lhs: DogsResponse, rhs: DogsResponse) -> Bool {
-    return lhs.message ?? [] == rhs.message ?? []
-}
-
 extension DogsResponse: Unboxable {
     init(unboxer: Unboxer) throws {
         self.status = unboxer.unbox(key: "status")

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0764566B202E36F9009798CE /* BreedsListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0764566A202E36F9009798CE /* BreedsListViewControllerTests.swift */; };
 		07C3F1D1202CB5B6004DB94B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C3F1D0202CB5B6004DB94B /* AppDelegate.swift */; };
 		07C3F1D8202CB5B6004DB94B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07C3F1D7202CB5B6004DB94B /* Assets.xcassets */; };
 		07C3F1DB202CB5B6004DB94B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07C3F1D9202CB5B6004DB94B /* LaunchScreen.storyboard */; };
@@ -47,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0764566A202E36F9009798CE /* BreedsListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsListViewControllerTests.swift; sourceTree = "<group>"; };
 		07C3F1CD202CB5B6004DB94B /* dogTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dogTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07C3F1D0202CB5B6004DB94B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		07C3F1D7202CB5B6004DB94B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -105,6 +107,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		07645669202E36E0009798CE /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0764566A202E36F9009798CE /* BreedsListViewControllerTests.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		07C3F1C4202CB5B5004DB94B = {
 			isa = PBXGroup;
 			children = (
@@ -212,6 +222,7 @@
 		07C3F1FB202CC11D004DB94B /* BreedsList */ = {
 			isa = PBXGroup;
 			children = (
+				07645669202E36E0009798CE /* ViewControllers */,
 				07C3F1FE202CC127004DB94B /* ViewModels */,
 				07C3F1FD202CC123004DB94B /* Models */,
 			);
@@ -663,6 +674,7 @@
 			files = (
 				07C3F24C202CF369004DB94B /* DogsResponseTests.swift in Sources */,
 				07C3F24E202CF3D9004DB94B /* BreedImagesViewModelTests.swift in Sources */,
+				0764566B202E36F9009798CE /* BreedsListViewControllerTests.swift in Sources */,
 				07C3F21E202CD1D8004DB94B /* BreedResponseTests.swift in Sources */,
 				07C3F22D202CDBFE004DB94B /* BreedsListViewModelTests.swift in Sources */,
 			);
